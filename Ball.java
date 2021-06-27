@@ -29,7 +29,11 @@ public class Ball {
 		this.height = height;
 		this.speed = speed;
 		this.cor = color;
-		angulo = Math.random()*6.28318530718;
+		int aleatorio = 1 + (int) (Math.random()*3); /** gera um inteiro aleatorio entre 1 e 4 */
+		if(aleatorio==1) angulo = 0.52359877559;	/** A partir do numero aleatorio*/	
+		if(aleatorio==2) angulo = 2.61799387799;	/** gera o angulo(30,150,210,330 graus) de saida da bola.*/
+		if(aleatorio==3) angulo = 3.66519142919;	/** Os angulos foram escolhidos em funcao da*/
+		if(aleatorio==4) angulo = 5.75958653158;	/** jogabilidade*/
 		this.vx = speed*Math.cos(angulo);
 		this.vy = speed*Math.sin(angulo);
 	}
