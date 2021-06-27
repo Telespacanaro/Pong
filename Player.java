@@ -53,7 +53,7 @@ public class Player {
 	*/
 
 	public void moveUp(long delta){
-		if(this.pcy+(this.pheight/2)>v_limit[0])this.pcy += (-pspeed)*delta;
+		if(this.pcy-(this.pheight/2)>v_limit[0]) this.pcy += (-pspeed)*delta;
 	}
 
 	/**

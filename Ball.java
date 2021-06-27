@@ -64,7 +64,6 @@ public class Ball {
 
 	public void onPlayerCollision(String playerId){
 		this.vx = -(this.vx);
-		//if(/*e frente ou costas do player*/) this.vx = -(this.vx);
 	}
 
 	/**
@@ -74,16 +73,19 @@ public class Ball {
 	*/
 
 	public void onWallCollision(String wallId){
-		if(wallId=="Bottom" ||wallId=="Top"){
+		if(wallId=="Bottom"){
+			this.vy = -(this.vy);
+		}
+		if(wallId=="Top"){
 			this.vy = -(this.vy);
 		}
 		if(wallId == "Left"){
 			this.vx = -(this.vx);
-			/* */
+			
 		}
 		if(wallId == "Right"){
 			this.vx = -(this.vx);
-			/*incrementa score player 1*/
+			
 		}
 		
 	}
@@ -121,8 +123,8 @@ public class Ball {
 
 	public boolean checkCollision(Player player){
 		
-		if(this.cx<=(player.getCx()+player.getHeight()/2) && this.cx>=(player.getCx()-player.getHeight()/2)){
-			if(this.cy<=(player.getCy()+player.getWidth()/2) && this.cy>=(player.getCy()-player.getWidth()/2)) return true;
+		if(this.cx<=(player.getCx()+((player.getWidth())/2)) && this.cx>=(player.getCx()-((player.getWidth())/2))){
+			if(this.cy<=(player.getCy()+((player.getHeight())/2)) && this.cy>=(player.getCy()-((player.getHeight())/2))) return true;
 		}
 		return false;
 	}

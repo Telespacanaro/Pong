@@ -13,12 +13,12 @@ public class Score {
 
 		@param playerId uma string que identifica o player ao qual este placar está associado.
 	*/
-	private int pontuacao;
+	public int pontuacao;
 	private String placar,Id;
 	public Score(String playerId){
 		this.pontuacao = 0;
 		this.Id = playerId;
-		this.placar =this.Id+" - "+Integer.toString(this.pontuacao);
+		this.placar =this.Id+":  "+Integer.toString(this.pontuacao);
 		
 	}
 
@@ -37,6 +37,7 @@ public class Score {
 
 	public void inc(){
 		this.pontuacao += 1;
+		this.placar =this.Id+" - "+Integer.toString(this.pontuacao);
 	}
 
 	/**
