@@ -1,0 +1,24 @@
+/*********************************************************************/
+/**   ACH2003 - Computação Orientada a Objetos (2021)  	            **/
+/**   EACH-USP - Primeiro Semestre de 2021                          **/
+/**   <04> - Marcos Lordello Chaim		     		    **/
+/**                                                                 **/
+/**   EP01  							    **/
+/**                                                                 **/
+/**   <Guilherme Teles Pacanaro>                <10376749>          **/
+/**                                                                 **/
+/*********************************************************************/
+
+Para executar esse programa, deve-se compilar as seguintes classes
+presentes na pasta src Player, Ball e Score com os seguintes comandos:
+
+	javac Player.java
+	javac Ball.java
+	javac Score.java
+
+Apos isso, deve-se executar a classe Pong com o seguinte comando:
+
+	java Pong
+
+Os controles para o jogo sao presentes não tela no momento da inicializacao
+do jogo
